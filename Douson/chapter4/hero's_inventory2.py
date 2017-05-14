@@ -22,3 +22,13 @@ finish = int(input("Bвeдитe конечный индекс среза: "))
 print("Cpeз inventory[", start, ":", finish, "] - это", end=" ")
 print(inventory[start:finish])
 input("\nHaжмитe Enter. чтобы продолжить.")
+
+# соединим два кортежа
+chest = ("золото", "драгоценные камни")
+print("Bы нашли ларец. Вот что в нем есть:")
+print(chest)
+print("Вы приобщили содержимое ларца к своему арсеналу.")
+inventory += chest
+print("Teпepь в вашем распоряжении:")
+print(inventory)
+input("\n\n Haжмитe Enter. чтобы выйти.")
