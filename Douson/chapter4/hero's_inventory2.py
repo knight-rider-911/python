@@ -11,7 +11,7 @@ for item in inventory:
 input("\nHaжмитe Enter. чтобы продолжить.")
 # найдем длину кортежа
 print("Ceйчac в вашем распоряжении" , len(inventory), "предмета/-ов.")
-input("\ nHaжмитe Enter. чтобы продолжить.")
+input("\n Haжмитe Enter. чтобы продолжить.")
 if "целебное снадобье" in inventory:
     print("Вы еще поживете и повоюете.")
 index = int(input("\nBвeдитe индекс одного из предметов арсенала: "))
