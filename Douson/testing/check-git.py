@@ -1,5 +1,5 @@
 print("Test")
 print("sd")
 print ("ubuntu is done")
-print("fedora is done")
+print("fedo1ra is done")
 print("win7")
