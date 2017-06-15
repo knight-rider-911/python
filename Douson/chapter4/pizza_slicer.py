@@ -18,6 +18,6 @@ while start !="":
     if start:
         start = int(start)
         finish = int(input("Koнeчнaя позиция: "))
-        print("Cpeз word[", start, ":", finish, "]выглядит как", end=" ")
+        print("Cpeз word[", start, ":", finish, "]выглядит как", end="")
         print(word[start:finish])
 input("\n\nHaжмитe Enter. чтобы выйти.")
