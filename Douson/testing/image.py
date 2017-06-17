@@ -6,7 +6,7 @@ while red != 11:
     while green !=10:
         while blue !=10:
             color = (red, green, blue)
-            img = Image.new('RGB', (100, 50), color)
+            img = Image.new((100, 50), 'RGB', color)
             imgDrawer = ImageDraw.Draw(img)
             img.save("/home/firefly/img/h" +str(red)+str(green)+str(blue) + "-e.png")
             blue=blue+1
