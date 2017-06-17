@@ -30,7 +30,7 @@ while choice != "0":
         name = input("Впишите имя игрока: ")
         score = int(input("Bnишитe его результат: "))
         entry = int(score.name)
-        scores.append(entry)
+        scores.append(entry )
         scores.sort(reverse=True)
         scores = scores[:5]  # в списке остается только 5 рекордов
     # непонятный пользовательский ввод
