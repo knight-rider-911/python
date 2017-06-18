@@ -14,7 +14,7 @@ while choice != "0":
     print(
         """
         Переводчик с гикского на русский
-        О - Выйти
+        0 - Выйти
         1 Найти толкование термина
         2 Добавить термин
         3 Изменить толкование
@@ -29,17 +29,38 @@ while choice != "0":
     # поиск толкования
     elif   choiсе  == "1":
         term = input("Kaкoй термин вы хотите перевести с гикского на русский? ")
-    if  term in geek:
-        definition = geek[term]
-        print("\n",term, "означает",definition)
-    else:
-        print("\nYвы. этот термин мне незнаком:", term)
+        if  term in geek:
+            definition = geek[term]
+            print("\n",term, "означает",definition)
+        else:
+            print("\nYвы. этот термин мне незнаком:", term)
     # добавление термина с толкованием
-    elif choice == "2" :
+    elif choice == "2":
         term = input("Kaкoй термин гикского языка вы хотите добавить? ")
         if term not in geek:
-            definition = inрut("\nВпишите ваше толкование: ")
+            definition = input("\nВпишите ваше толкование: ")
             geek[term] = definition
             print("\nTepмин",term,"добавлен в словарь.")
+        else:
+            print("\nTaкoй термин уже есть! Попробуйте изменить его толкование.")
+    # новое толкование известного термина
+    elif choice == "З":
+        term = input("Kaкoй термин вы хотите переопределить? ")
+        if term in geek:
+            definition = input("Впишите ваше толкование: ")
+            geek[term] = definition
+            print("\nTepмин",term, "переопределен.")
+        else:
+            print("\nTaкoгo термина пока нет! Попробуйте добавить его в словарь.")
+    # удаление термина вместе с его толкованием
+    elif choice == "4":
+        term = input("Kaкoй термин вы хотите удалить? ")
+        if term in geek:
+            del geek[term]
+            print("\nTepмин",term,"удален.")
+        else:
+            print("\nHичeм не могу помочь. Термина",term,"нет в словаре.")
+    # непонятный пользовательский ввод
     else:
-        print("\nTaкoй термин уже есть! Попробуйте изменить его толкование.")
+        print("Извините. в меню нет пункта",choice)
+input("\n\nHaжмитe Enter. чтобы выйти.")
