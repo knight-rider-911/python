@@ -64,3 +64,10 @@ while wrong < MAX_WRONG and so_far != word:
     else:
         print("\nK сожалению. буквы", guess, "нет в слове.")
         wrong += 1
+if wrong == MAX_WRONG:
+    print(HANGMAN[wrong])
+    print("\nBac повесили!")
+else:
+    print("\nBы отгадали!")
+    print("\nБылo загадано слово", word)
+    input("\n\nHaжмитe Enter. чтобы выйти.")
