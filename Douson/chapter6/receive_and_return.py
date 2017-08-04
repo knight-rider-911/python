@@ -8,7 +8,7 @@ def give_me_five() :
 def ask_yes_no(question) :
     """Задает вопрос с ответом 'да' или 'нет '. """
     response = None
-    while response not in ("у", "n") :
+    while response not in ("y", "n") :
         response = input(question) .lower()
     return response
 # основная часть
