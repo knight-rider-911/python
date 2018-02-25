@@ -17,5 +17,5 @@ while count >5:
 
 
 del draw
-image.save("d:\\test.png", "PNG")
+image.save("/home/eagle/est.png", "PNG")
 
