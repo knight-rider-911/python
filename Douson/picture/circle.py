@@ -11,7 +11,7 @@ count = 25
 while count >5:
 
 
-    draw.ellipse((450-count*10, 450-count*10, 500+count*10, 500+count*10), fill=(255-count*3,255-count*5,20+count*5), outline=(255-count*3,255-count*5,20+count*5))
+    draw.ellipse((450-count*10, 450-count*10, 500+count*10, 500+count*10), fill=(255-count*3,255-count*5,80+count*5), outline=(255-count*3,255-count*5,80+count*5))
     count-=1
 
 
