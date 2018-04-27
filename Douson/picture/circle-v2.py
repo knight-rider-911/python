@@ -7,15 +7,12 @@ draw = ImageDraw.Draw(image)
 def to_radan(x):
     return x*pi/180.0
 
-count = 40
+count = 200
 while count >1:
-
-
-    draw.ellipse((450-count*10, 450-count*10, 500+count*10, 500+count*10), fill=(255-count*3,200-count*3,0+count*3), outline=(255-count*3,200-count*3,0+count*3))
-    count-=1
-
-
-
+	draw.ellipse((250-count, 255-count, 255+count, 250+count), \
+		fill=(255-count,0+count,255-count), \
+		outline=(255-count,0+count,255-count))
+	count-=1
 del draw
 image.save("/home/eagle/est.png", "PNG")
 
