@@ -40,5 +40,5 @@ while count <11:
 
 
 del draw
-image.save("/home/firefly/test.png", "PNG")
+image.save("d:\1t.PNG", "PNG")
 

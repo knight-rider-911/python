@@ -13,9 +13,5 @@ while count >1:
 
     draw.ellipse((450-count*10, 450-count*10, 500+count*10, 500+count*10), fill=(255-count*3,200-count*3,0+count*3), outline=(255-count*3,200-count*3,0+count*3))
     count-=1
-
-
-
 del draw
 image.save("/home/eagle/est.png", "PNG")
-

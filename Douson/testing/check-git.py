@@ -1,5 +1,6 @@
-print("Test")
-print("sd")
-print ("ubuntu is done")
-print("fedo1ra is done")
-print("win72hf3")
+import encodings.aliases
+arr = encodings.aliases.aliases
+keys = list( arr.keys() )
+keys.sort()
+for key in keys:
+    print("%s => %s" % (key, arr[key]))
