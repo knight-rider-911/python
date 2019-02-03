@@ -27,10 +27,28 @@
 
 
 
-import os
-for root, dirs, files in os.walk("/home/knight/git/python/python/Douson/testing", topdown=False):
-   for name in files:
-      print(os.path.join(root, name))
-   # print dir
-   # for name in dirs:
-   #    print(os.path.join(root, name))
+# import os
+# for root, dirs, files in os.walk("/home/knight/git/python/python/Douson/testing", topdown=False):
+#    for name in files:
+#       print(os.path.join(root, name))
+#    # print dir
+#    # for name in dirs:
+#    #    print(os.path.join(root, name))
+
+
+
+# import glob,os
+# os.chdir("/home/knight/git/python/python/")
+# for root,dirs,files in os.walk("/home/knight/git/python/python"):
+#     for file in files:
+#         if file.endswith("*.py"):
+#             print(os.path.join(root, file))
+
+
+import os, os.path
+
+for root, dirs, files in os.walk("/home/knight/git/python/python/"):
+    for f in files:
+        fullpath = os.path.join(root, f)
+        if os.path.splitext(fullpath)[1] == '.py':
+            print (fullpath)
