@@ -1,4 +1,3 @@
-from
 from linux.chapter1.pysysinfo_func_2 import disk_func
 import subprocess
 def tmp_space():
