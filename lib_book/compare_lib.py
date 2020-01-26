@@ -10,13 +10,15 @@ def check_sum(path):
     return str_check_sum
 
 
-init_cat='e:/tmp_book/'
+
+
+# init_cat='e:/tmp_book/'
 # compare_cat='d:/data/knight/YandexDisk/Book for read/'
-# init_cat='e:/data/Firefly/Фото/ЛИСА/100NIKON'
+init_cat='d:/data/Firefly/Фото/'
 # init_cat='/home/knight/Network/'
 contain=os.walk(init_cat)
 # file_export = open('text_d.csv', 'w')
-file_ar=['']
+file_ar=[]
 comp_file_ar=['']
 
 for (root, dirs, files) in os.walk(init_cat):
@@ -46,18 +48,25 @@ for (root, dirs, files) in os.walk(init_cat):
 #         it=it+1
 #     # print(i)
 #     i=i+1
+print("Check name\n\n\n")
 i=0
 while i < len(file_ar):
-    # print(file_ar[i]+'\n\n\n\n\n')
     it=0
     while it < len(file_ar):
-        # print(file_ar[it]+'123132')
-        # if (str(check_sum(file_ar[i]))==str(check_sum(file_ar[it]))):
-        #     print("Found"+file_ar[i])
         if str(os.path.basename(file_ar[i]))==str(os.path.basename(file_ar[it])) and (i!=it):
-            print('Found '+ str(file_ar[i])+ '    and     '+str(file_ar[it])  +' checksum  '+ str(check_sum(file_ar[i])) )
+            print('Found for name '+ str(file_ar[i])+ '    and     '+str(file_ar[it])  +' checksum  '+ str(check_sum(file_ar[i])) )
         it=it+1
     i=i+1
 
+print("\n\n\nCheck size\n\n\n")
+i=0
 
+
+while i < len(file_ar):
+    it=0
+    while it < len(file_ar):
+        if str(os.path.getsize(file_ar[i]))==str(os.path.getsize(file_ar[it])) and (i!=it):
+            print('Found for name '+ str(file_ar[i])+ '    and     '+str(file_ar[it])  +' checksum  '+ str(check_sum(file_ar[i])) )
+        it=it+1
+    i=i+1
 
