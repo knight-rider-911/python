@@ -13,3 +13,5 @@ sudo mount -w /dev/sdc1 /vm/
 #Ouput disks
 lsblk
 sudo blkid
+
+whoami

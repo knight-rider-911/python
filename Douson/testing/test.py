@@ -15,17 +15,24 @@
 
 
 
-alphabet='абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-num = '432124050'
+# alphabet='абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+# num = '432124050'
 
-def decode(s):
-    out=''
-    m = int(s[0])
-    s=s[:0:-1]
-    while len(s)>0:
-        ch_ = alphabet[int(s[:2] if len(s)>=2 else s[:1])-int(m)]
-        s=s[2:] if len(s)>=2 else s[1:]
-        out+=ch_
-    return out.capitalize()
+# def decode(s):
+#     out=''
+#     m = int(s[0])
+#     s=s[:0:-1]
+#     while len(s)>0:
+#         ch_ = alphabet[int(s[:2] if len(s)>=2 else s[:1])-int(m)]
+#         s=s[2:] if len(s)>=2 else s[1:]
+#         out+=ch_
+#     return out.capitalize()
 
-print(decode(num))
+# print(decode(num))
+
+
+
+from pathlib import Path
+
+home = str(Path.home())
+print(home)
