@@ -12,9 +12,9 @@ def check_sum(path):
 
 
 
-# init_cat='e:/tmp_book/'
-# compare_cat='d:/data/knight/YandexDisk/Book for read/'
-init_cat='d:/data/Firefly/Фото/'
+init_cat='d:/tmp/netbook/temp/'
+compare_cat='d:/Themes/Pictures/'
+# init_cat='d:/data/Firefly/Фото/'
 # init_cat='/home/knight/Network/'
 contain=os.walk(init_cat)
 # file_export = open('text_d.csv', 'w')
@@ -48,25 +48,37 @@ for (root, dirs, files) in os.walk(init_cat):
 #         it=it+1
 #     # print(i)
 #     i=i+1
+print(file_ar[3])
 print("Check name\n\n\n")
+# i=0
+# while i < len(file_ar):
+#     it=0
+#     while it < len(file_ar):
+#         if str(os.path.basename(file_ar[i]))==str(os.path.basename(file_ar[it])) and (i!=it):
+#             print('Found for name '+ str(file_ar[i])+ '    and     '+str(file_ar[it])  +' checksum  '+ str(check_sum(file_ar[i])) )
+#         it=it+1
+#     i=i+1
+#
+# print("\n\n\nCheck size\n\n\n")
+# i=0
+
+
+# while i < len(file_ar):
+#     it=0
+#     while it < len(file_ar):
+#         if str(os.path.getsize(file_ar[i]))==str(os.path.getsize(file_ar[it])) and (i!=it):
+#             print('Found for name '+ str(file_ar[i])+ '    and     '+str(file_ar[it])  +' checksum  '+ str(check_sum(file_ar[i])) )
+#         it=it+1
+#     i=i+1
+print('Cheksum check')
 i=0
-while i < len(file_ar):
+while i< len(file_ar):
     it=0
     while it < len(file_ar):
-        if str(os.path.basename(file_ar[i]))==str(os.path.basename(file_ar[it])) and (i!=it):
+        if (str(check_sum(file_ar[i])) == str(check_sum(file_ar[it]))) and (i!=it):
             print('Found for name '+ str(file_ar[i])+ '    and     '+str(file_ar[it])  +' checksum  '+ str(check_sum(file_ar[i])) )
-        it=it+1
+        print(it)
+        it = it+1
+    print('**************************************************************************************'+str(i))
     i=i+1
-
-print("\n\n\nCheck size\n\n\n")
-i=0
-
-
-while i < len(file_ar):
-    it=0
-    while it < len(file_ar):
-        if str(os.path.getsize(file_ar[i]))==str(os.path.getsize(file_ar[it])) and (i!=it):
-            print('Found for name '+ str(file_ar[i])+ '    and     '+str(file_ar[it])  +' checksum  '+ str(check_sum(file_ar[i])) )
-        it=it+1
-    i=i+1
-
+print('End file check')

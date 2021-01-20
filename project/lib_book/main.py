@@ -13,16 +13,17 @@ def check_sum(path):
 
 
 
-init_cat='d:/E-Book/E-book/network'
+# init_cat='d:/E-Book/E-book/network'
+init_cat='e:/data/Firefly/Фото/ЛИСА/100NIKON'
 # init_cat='/home/knight/Network/'
 contain=os.walk(init_cat)
-file_export = open('text.csv', 'w')
+file_export = open('text_d.csv', 'w')
 for (root, dirs, files) in os.walk(init_cat):
     for file in files:
         fullpath = os.path.join(root,file)
         fullpath = fullpath.replace('\\','/')
-        print(fullpath)
-        print(file +'  ' + str(os.path.getsize(fullpath))+' checksum is'+check_sum(fullpath)+ '\n\n\n')
+        # print(fullpath)
+        # print(file +'  ' + str(os.path.getsize(fullpath))+' checksum is'+check_sum(fullpath)+ '\n\n\n')
         file_export.write(fullpath+';'\
                           + str(os.path.getsize(fullpath))+';'
                           + str(check_sum(fullpath))+';'+'\n'
