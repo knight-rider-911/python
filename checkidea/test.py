@@ -14,7 +14,6 @@
 # # while len(payload)>0:
 
 
-
 # alphabet='абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 # num = '432124050'
 
@@ -30,9 +29,16 @@
 
 # print(decode(num))
 
+# from pathlib import Path
+#
+# home = str(Path.home())
+# print(home)
+
+# year = 1900
+# if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+#     print ('YES')
+# else:
+#     print ('NO')
 
 
-from pathlib import Path
 
-home = str(Path.home())
-print(home)

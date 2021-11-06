@@ -1,7 +1,9 @@
 from PIL import Image, ImageDraw
 from math import cos,sin,pi
 from pathlib import Path
-image = Image.new("RGB", (900,900),(55,54,54))
+max_resolution_x=3840
+max_resolution_y=3840
+image = Image.new("RGB", (max_resolution_x,max_resolution_y),(55,54,54))
 draw = ImageDraw.Draw(image)
 #draw.rectangle((0,0,900,900), fill="white", outline="white")
 
@@ -42,6 +44,7 @@ while count <11:
 
 del draw
 
-home_dir = (str(Path.home())+'/picture.png')
+# home_dir = (str(Path.home())+'/picture.png')
+home_dir='d:\\tmp\\picture.png'
 image.save(home_dir, "PNG")
-
+print(home_dir)

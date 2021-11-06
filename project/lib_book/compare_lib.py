@@ -12,7 +12,7 @@ def check_sum(path):
 
 
 
-init_cat='d:/tmp/netbook/temp/'
+init_cat='d:/data/telegeram/'
 compare_cat='d:/Themes/Pictures/'
 # init_cat='d:/data/Firefly/Фото/'
 # init_cat='/home/knight/Network/'
@@ -48,7 +48,7 @@ for (root, dirs, files) in os.walk(init_cat):
 #         it=it+1
 #     # print(i)
 #     i=i+1
-print(file_ar[3])
+# print(file_ar[3])
 print("Check name\n\n\n")
 # i=0
 # while i < len(file_ar):

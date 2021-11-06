@@ -2,14 +2,13 @@ import os,shutil
 
 init_cat='d:/tmp_book/'
 create_cat=init_cat+'Science/Mathematics/'
-if os.path.exists(create_cat):
-    if os.path.isfile(create_cat):
-        print("It's file")
-    if os.path.isdir(create_cat):
-        print("It's directory")
-else: 
+
+try:
     os.makedirs(create_cat)
-    print("Directory was created")
+except FileExistsError:
+    print('Такой файл или каталог уже есть ' + create_cat)
+except Exception:
+    print('Это что ещё такое?')
 
 
 tmp_file=['']
