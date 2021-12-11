@@ -13,19 +13,21 @@ def check_sum(path):
 def create_dump_folder(init_cat):
     f = open('dump.txt', 'w')
     print(init_cat)
-    for item in init_cat:
-        for (root, dirs, files) in os.walk(item):
-            for file in files:
-                print(init_cat)
-                fullpath = os.path.join(root, file)
-                print('Fullpath='+fullpath+'\n')
-                fullpath = fullpath.replace('\\', '/')
-                f.write(fullpath + ';' + check_sum(fullpath) + '\n')
+    for (root, dirs, files) in os.walk(init_cat):
+        for file in files:
+            print(init_cat)
+            fullpath = os.path.join(root, file)
+            print('Fullpath='+fullpath+'\n')
+            fullpath = fullpath.replace('\\', '/')
+            f.write(fullpath + ';' + check_sum(fullpath) + '\n')
                 # tmp_file.append(fullpath + ';' + check_sum(fullpath))
     f.close()
 
-init_cat='d:/tmp/1253/'
+init_cat='/Users/mcheryasov/code/private/code-python/'
 create_dump_folder(init_cat)
+
+
+
 #initialization variables
 # init_cat='d:/data/Firefly/Фото/'
 
