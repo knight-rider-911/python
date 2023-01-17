@@ -51,6 +51,6 @@ while (newcount < max_resolution_x*0.98):#or(newcount < max_resolution_y*0.98):
 del draw
 
 # home_dir = (str(Path.home())+'/picture.png')
-home_dir='d:\\tmp\\picture1.png'
+home_dir='d:\\tmp\\tmp\\picture1.png'
 image.save(home_dir, "PNG")
 print(home_dir)

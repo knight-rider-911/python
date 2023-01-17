@@ -61,4 +61,4 @@ import random
 
 str="GggYGuyjpLIjk [] ;loplhnliPKJHlk,VO;,mbnoiPOlkh"
 str2=""
-print(str.lower())
+print(str.upper())
